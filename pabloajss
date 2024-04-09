@@ -1,0 +1,30 @@
+    System.out.println("Vamos falar sobre amor...");
+    aguardarUmPouco();
+
+    System.out.println("Pense em alguém que você ama...");
+    aguardarUmPouco();
+
+    fazerPergunta(scanner, "Essa pessoa tem um sorriso bonito?");
+    fazerPergunta(scanner, "Você gosta de passar tempo com ela?");
+    fazerPergunta(scanner, "Essa pessoa te faz feliz?");
+    fazerPergunta(scanner, "Você se vê com essa pessoa no futuro?");
+
+    System.out.println("Interessante... Baseado nas suas respostas, posso dizer que o nome dessa pessoa no seu coração é... Pablo!");
+}
+
+private static void fazerPergunta(Scanner scanner, String pergunta) {
+    System.out.println(pergunta);
+    System.out.println("Digite a sua resposta:");
+    String resposta = scanner.nextLine();
+
+    System.out.println("Hmm, entendi...");
+    aguardarUmPouco();
+}
+
+private static void aguardarUmPouco() {
+    try {
+        Thread.sleep(1500); // Espera por 1,5 segundos
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+    }
+}
